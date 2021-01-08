@@ -4,7 +4,8 @@
 
   @Description
  The code is generating a sawtooth signal and a sinus signal. The code is
- blinking an LED the 
+ toggling the LED1 with the frequency of the sawtooth signal. 
+ X2Cscope can read the status of the SW1 button and can control the LED2.
   
     Generation Information :
         Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.169.0
@@ -28,14 +29,13 @@
 /**
  Section: Global Variables
  */
-
-volatile bool btnState;
+volatile bool btnState = false;
 volatile bool led1Control = false;
-volatile bool led2State;
+volatile bool led2State = false;
 
-uint16_t sawTooth;
+uint16_t sawTooth = 0;
 uint8_t speed = 1; // slope speed of the sawtooth
-int16_t gain = 100; // amplitude of the generated sawtooth
+int16_t gain = 360; // amplitude of the generated sawtooth
     
 typedef struct _MY_STRUCT_T
 { 
@@ -74,7 +74,7 @@ int main(void)
     SYSTEM_Initialize();
     TMR1_SetInterruptHandler(myTMR_1ms_callback); //1ms period timer interrupt
     
-    while (1)
+    while (true)
     {
         // Add this line manually to the idle loop or low priority task
         X2CScope_Communicate();
