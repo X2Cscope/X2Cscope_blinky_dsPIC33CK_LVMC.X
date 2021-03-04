@@ -1,4 +1,4 @@
-# MPLAB X Project: mc_foc_sl_fip_dspic33ck_mclv2
+# MPLAB X Project: X2Cscope_blinky_dsPIC33CK_LVMC
 
 This is a X2Cscope demo project for [Low Voltage Motor Control (LVMC)](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM330031) development board and [dsPIC33CK256MP508](https://www.microchip.com/wwwproducts/en/dsPIC33CK256MP508) microcontroller that is populated on the board. 
 
@@ -24,7 +24,7 @@ The demo is ready to use with the [listed hardwares below](#hardware).
 
 The X2Cscope tool using the UART to transfer data from and to the HW. To use this feature follow the steps:
 
-1. Verify if X2Cscope plug-in is installed within MPLAVB X
+1. Verify if X2Cscope plug-in is installed within MPLAB X
 2. Open X2Cscope 
 
 ![Open X2C MCC](doc/open_X2Cscope.png)
@@ -37,7 +37,7 @@ The X2Cscope tool using the UART to transfer data from and to the HW. To use thi
 
 6. Use the data views
 
-More details how to use X2Cscope: https://mchp-x2cscope.github.io/
+More details how to use X2Cscope: https://x2cscope.github.io/
 ## Hardware
 
 * **LVMC dev board:** [DM330031](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM330031) Low voltage motor control development board with [dsPIC33CK256MP508] (https://www.microchip.com/wwwproducts/en/dsPIC33CK256MP508) MCU populated on board

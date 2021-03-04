@@ -4,7 +4,8 @@
 
   @Description
  The code is generating a sawtooth signal and a sinus signal. The code is
- blinking an LED the 
+ toggling the LED1 with the frequency of the sawtooth signal. 
+ X2Cscope can read the status of the SW1 button and can control the LED2.
   
     Generation Information :
         Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.169.0
