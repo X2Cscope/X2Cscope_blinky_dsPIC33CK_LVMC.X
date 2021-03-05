@@ -1,12 +1,20 @@
 import time
-print "!Limitation! Struct members must be listed in the X2C Watch view"
+#ASCII console color codes
+RED = "\033[31m"
+
 print "####################"
-print "Test Watchinterfaces"
+print "Test Watchinterfaces - interacts directly with the watch view"
 print "####################"
-symbol = x2c_symbol.getSymbol("myStruct.ledOn")
+symbol = x2c_symbol.getSymbol("led1Control")
 print "---"
 print "Offset test"
-print symbol.getOffset()
+
+try :
+    print symbol.getOffset()
+except:
+    print RED + "No X2C watch instance found. Open X2C watch window and add led1Control first."
+    sys.exit(1) #terminate
+
 symbol.setOffset(symbol.getOffset()+1)
 print symbol.getOffset()
 
@@ -34,10 +42,10 @@ print symbol.getValue()
 
 
 print "####################"
-print "Test Scope interfaces"
+print "Test Scope interfaces - it uses its own instance, no sync with scope window"
 print "####################"
 
-x2c_scope.setChannelConfig(7, "sinus", 1, 0)
+x2c_scope.setChannelConfig(7, "myStruct.sinus", 1, 0)
 x2c_scope.setTrigger(7, -0.7, "RISING", 0)
 x2c_scope.setSampleTimeFactor(1)
 x2c_scope.sample(False);

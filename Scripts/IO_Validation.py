@@ -27,10 +27,10 @@ def validateLedState(state):
 
 print "LED ON Test:"
 ledVariable.setValue(True) #Thread to switch ON the LED
-time.sleep(2) #Wait for switch
+time.sleep(0.1) #Wait for switch
 validateLedState(True) #validate new state
 
 print "\nLED Off Test:"
 ledVariable.setValue(False) #Switch OFF the LED
-time.sleep(2) #Wait for switch
+time.sleep(0.1) #Wait for switch
 validateLedState(False) #validate new state

@@ -40,11 +40,12 @@ print type(data[0])
 
 #Use netbeans APIs to get and set project environment
 prj = OpenProjects.getDefault().getMainProject()
-prjDir = prj.getProjectDirectory().getPath() 
 try :
+    prjDir = prj.getProjectDirectory().getPath() 
     print prjDir
 except:
-    print RED + "Set as Main project"
+    print RED + "No project folder found. Right click on project -> Set as Main project"
+    sys.exit(1) #terminate
     
 os.chdir(prjDir) # change working dir to the project
 print os.getcwd()
