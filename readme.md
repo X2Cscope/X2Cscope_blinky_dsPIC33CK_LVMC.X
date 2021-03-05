@@ -2,9 +2,9 @@
 
 This is a X2Cscope demo project for [Low Voltage Motor Control (LVMC)](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM330031) development board and [dsPIC33CK256MP508](https://www.microchip.com/wwwproducts/en/dsPIC33CK256MP508) microcontroller that is populated on the board. 
 
-The purpose is to demonstrate the X2Cscope tool features like run-time watch and scope views.
+The purpose is to demonstrate the [X2Cscope firmware based debugger tool](https://x2cscope.github.io/) features like run-time watch and scope views.
 
-The code functionality is minimalistic in order to avoid unneceseary confusion. It is generating internally a digital sawtooth and a sine signal. There is LED1 that is blinking with the sawtooth signal's period. The LED2 can be controlled manually by the X2Cscope tool. The state of the SW1 can be read out by X2Cscope.
+The code functionality is minimalistic in order to avoid unneceseary confusion. It is generating internally a digital sawtooth and a sine signal. There is LED1 that is blinking with the sawtooth signal's period. The LED2 can be controlled manually by the [X2Cscope run-time debugger tool](https://x2cscope.github.io/). The state of the SW1 can be read out by X2Cscope.
 
 ![HW setup](doc/LVMC_Blinky_Connectors.gif)
 ![X2Cscope](doc/Scope_Animated.gif)
@@ -24,20 +24,19 @@ The demo is ready to use with the [listed hardwares below](#hardware).
 
 The X2Cscope tool using the UART to transfer data from and to the HW. To use this feature follow the steps:
 
-1. Verify if X2Cscope plug-in is installed within MPLAB X
+1. Verify if X2Cscope plug-in is installed within MPLAB X. Detailed user guide: https://x2cscope.github.io/
 2. Open X2Cscope 
 
 ![Open X2C MCC](doc/open_X2Cscope.png)
 
 3. Verify UART settings at the Connection Setup tab and also check the COM port number on the PC. (device manager)
 
-4. Connect to the HW with X2Cscope: 
+4. Connect to the HW with clicking on the connect sign:
 
 ![Open Button](doc/Connect_X2Cscope.png)
 
-6. Use the data views
+6. Use the data views.
 
-More details how to use X2Cscope: https://x2cscope.github.io/
 ## Hardware
 
 * **LVMC dev board:** [DM330031](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM330031) Low voltage motor control development board with [dsPIC33CK256MP508] (https://www.microchip.com/wwwproducts/en/dsPIC33CK256MP508) MCU populated on board
