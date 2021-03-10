@@ -95,4 +95,4 @@ To use the demo only the MPLAB X IDE and XC16 compiler is required.
 
 * [XC16 v1.60](https://www.microchip.com/mplab/compilers) - Microchip C compiler for 16bit micros
 * [MCC v4.0.2](https://www.microchip.com/mplab/mplab-code-configurator) - Configure peripherals and generate low levev drivers
-* [X2Cscope v0.5](https://mchp-x2cscope.github.io/) - Run-time firmware based debugger tool
+* [X2Cscope v0.5](https://x2cscope.github.io/) - Run-time firmware based debugger tool
