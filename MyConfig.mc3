@@ -1,4 +1,5 @@
-<config configName="default" projectName="X2Cscope_blinky_dsPIC33CK_LVMC" configVersion="1.1" device="dsPIC33CK256MP508" coreVersion="5.1.0-n">
+<config configName="default" projectName="X2Cscope_blinky_dsPIC33CK_LVMC" configVersion="1.1" device="dsPIC33CK256MP508" deviceLibraryClass="com.microchip.mcc.mcu16.Mcu16PeripheralLibrary" coreVersion="5.2.0-d">
+   <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
          <string>DMT</string>
@@ -45,7 +46,7 @@
          <string>class com.microchip.mcc.mcu16.systemManager.wdt.Wdt</string>
       </entry>
       <entry>
-         <string>X2C_Scope</string>
+         <string>X2Cscope</string>
          <string>class com.microchip.mcc.modules.x2cscope.scope.X2C_Scope</string>
       </entry>
       <entry>
@@ -60,7 +61,7 @@
    <usedLibraries class="java.util.ArrayList">
       <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.mcu16.Mcu16PeripheralLibrary" version="1.170.0"/>
       <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.boardsupportlibrary.BoardSuppportLibrary" version="1.12.0"/>
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.x2cscope.X2CScopeLibrary" version="0.5"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.x2cscope.X2CScopeLibrary" version="1.0.0"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -17440,14 +17441,26 @@
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="X2C_Scope" name="selectScopeCommMethod"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="X2Cscope" name="selectScopeCommMethod"/>
          <value>UART1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="X2Cscope" name="selectScopeUpdateCallPos"/>
+         <value>TMR1_Int</value>
       </entry>
    </tokenMap>
    <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
          <file>mcc_generated_files\interrupt_manager.h</file>
          <hash>4007fb1c34313252bbcf37ba8cc3fbed9fcbf25f750450dccea16559d80cba14</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\X2Cscope\X2CscopeComm.c</file>
+         <hash>d9de0dd7e0a42ebf3b4b5072699ff8433ebe19838adad1b7879ff2a56edbcbad</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\X2Cscope\X2CscopeComm.h</file>
+         <hash>7d2c12ca2b8eec44fb6950400432e6294fe8c3f5c34ee039f21374c1e4a3a426</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\system_types.h</file>
@@ -17458,12 +17471,8 @@
          <hash>56403518dd1e6b895098e8140b179626e68ec527edcd67c1cedb460ddbcc7a57</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\X2CScope\X2CScopeComm.c</file>
-         <hash>274799decc41a80704dc85076655c7c559c60d843bf5d61f6f01f4ffc96986c2</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\system.c</file>
-         <hash>92a6af6466818fafc18fb56ed672b14b547392007c2078baa4f51284f52b9690</hash>
+         <hash>36a949675bf98ed5960c3264a3213930727f58936796f867d33bb2ef672a68e2</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\clock.h</file>
@@ -17478,12 +17487,8 @@
          <hash>dd2d413de3798c4dfc1d1a0d80a00ae33e0a58fc51206d859374033f04bf0cf1</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\X2CScope\X2CScopeComm.h</file>
-         <hash>7d2c12ca2b8eec44fb6950400432e6294fe8c3f5c34ee039f21374c1e4a3a426</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\mcc.h</file>
-         <hash>440b8d69161cd61ff2fb03650b53ed927c2fce136ee226c3c86e5fe663c6e737</hash>
+         <hash>3daafc4e9044d4cab438827ca95dee84aad5ed2abdce3716d99f1ab378deb35f</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\reset.c</file>
@@ -17494,12 +17499,12 @@
          <hash>7d3445facf36e5d5da71073cc151a5917576e081890266665afd2f1d17d20491</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\uart1.c</file>
-         <hash>9b67f2687e11f00274482717fbf335c67482ed5833a156278ce3f8d6039d619b</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\tmr1.h</file>
          <hash>1385b3def84ef2be8205ba395132aa410619de67ead70aacb712c00ccb4e6a40</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\uart1.c</file>
+         <hash>9b67f2687e11f00274482717fbf335c67482ed5833a156278ce3f8d6039d619b</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\clock.c</file>
@@ -17518,12 +17523,12 @@
          <hash>f32932291f4f4daf667ad1a369c1a011ef8c7d44b5a4e7e6ed74e8f2fc96536b</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\X2CScope\libx2cscope-33ck-elf.a</file>
+         <file>mcc_generated_files\X2Cscope\libx2cscope-33ck-elf.a</file>
          <hash>a3506e40f94fdec53b83c2a7124d74670ffe4fd6964170d0a8069c19738b9206</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.c</file>
-         <hash>2131526c3d18e3a49e400c1f601dc0f16e216e3af4166f83c229144e4c5a6ff7</hash>
+         <hash>a3e0b6d8484b11bf61c0471ccac0cedcb2e94ae4d8b2d69d45d34f62533c9b8a</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\traps.c</file>
@@ -17534,16 +17539,16 @@
          <hash>7414ae71c3c8394f51ceee980a9ce33408955762436cb914aa5518cc600c4c5e</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\X2CScope\X2CScope.c</file>
-         <hash>db7c09193b3589994cc84471cb6226808b2e12e05e837a603debeea530885ed7</hash>
+         <file>mcc_generated_files\X2Cscope\X2Cscope.h</file>
+         <hash>cec71c0520b8afd57aa10bb6170b6ba5f35501f34486e8d1f45fa62f8e02b1e9</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\interrupt_manager.c</file>
          <hash>e6b847fe538d7c4885aca954be146191dd04602903bdf8386f941f7b055310f4</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\X2CScope\X2CScope.h</file>
-         <hash>c4c1e8964b703295e7b65ce331295da2a5b143aa63b8960f48c1e62c59fa9d07</hash>
+         <file>mcc_generated_files\X2Cscope\X2Cscope.c</file>
+         <hash>e6089a5f4a685ddd6a9d727db41b23ce5d1ef6a6fc1e7802648f5062ea45c2f8</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\watchdog.h</file>

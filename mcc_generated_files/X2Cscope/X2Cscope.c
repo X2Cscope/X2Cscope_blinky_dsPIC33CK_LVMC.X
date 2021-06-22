@@ -30,21 +30,11 @@
 /*
  * This file is part of X2C. http://www.mechatronic-simulation.org/
  */
-#ifndef X2CSCOPE_H
-#define X2CSCOPE_H
+#include "X2CScopeComm.h"
+#include "X2CScope.h"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-#include <stdint.h>
-
-void X2Cscope_Init(void);
-void X2CScope_Communicate(void);
-void X2CScope_Update(void);
-
-#ifdef __cplusplus
+void X2CScope_Init(void)
+{
+    X2CScope_HookUARTFunctions(sendSerial, receiveSerial, isReceiveDataAvailable, isSendReady);
+    X2CScope_Initialise();
 }
-#endif
-
-#endif

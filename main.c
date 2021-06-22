@@ -3,16 +3,13 @@
  This simple code is demonstrating the X2Cscope functionalities.
 
   @Description
- The code is generating a sawtooth signal and a sinus signal. The code is
- toggling the LED1 with the frequency of the sawtooth signal. 
- X2Cscope can read the status of the SW1 button and can control the LED2.
-  
+    This source file provides main entry point for system initialization and application code development.
     Generation Information :
         Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.169.0
         Device            :  dsPIC33CK256MP508
     The generated drivers are tested against the following:
-        Compiler          :  XC16 v1.50
-        MPLAB 	          :  MPLAB X v5.40
+        Compiler          :  XC16 v1.70
+        MPLAB 	          :  MPLAB X v5.50
 */
 
 /**
