@@ -42,8 +42,8 @@
                      displayName="MCC Generated Files"
                      projectFiles="true">
         <logicalFolder name="X2Cscope" displayName="X2Cscope" projectFiles="true">
-          <itemPath>mcc_generated_files/X2Cscope/X2Cscope.c</itemPath>
           <itemPath>mcc_generated_files/X2Cscope/X2CscopeComm.c</itemPath>
+          <itemPath>mcc_generated_files/X2Cscope/X2Cscope.c</itemPath>
         </logicalFolder>
         <itemPath>mcc_generated_files/uart1.c</itemPath>
         <itemPath>mcc_generated_files/tmr1.c</itemPath>
@@ -75,10 +75,10 @@
         <targetDevice>dsPIC33CK256MP508</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>pkob4hybrid</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC16</languageToolchain>
         <languageToolchainVersion>1.70</languageToolchainVersion>
-        <platform>3</platform>
+        <platform>2</platform>
       </toolsSet>
       <packs>
         <pack name="dsPIC33CK-MP_DFP" vendor="Microchip" version="1.6.176"/>
@@ -144,7 +144,7 @@
         <property key="oXC16gcc-sfr-warn" value="false"/>
         <property key="oXC16gcc-smar-io-lvl" value="1"/>
         <property key="oXC16gcc-smart-io-fmt" value=""/>
-        <property key="optimization-level" value="s"/>
+        <property key="optimization-level" value="1"/>
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros" value=""/>

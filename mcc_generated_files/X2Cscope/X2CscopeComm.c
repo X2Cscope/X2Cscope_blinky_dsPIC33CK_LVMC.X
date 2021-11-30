@@ -10,7 +10,7 @@
  */
 /* ************************************************************************** */
 #include <xc.h>
-#include "X2CScopeComm.h"
+#include "X2CscopeComm.h"
 #include "../uart1.h"
 
 /** 

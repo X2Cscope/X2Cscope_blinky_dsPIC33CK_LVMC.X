@@ -16,9 +16,9 @@
   Section: Included Files
 */
 #include "mcc_generated_files/system.h"
-#include "mcc_generated_files/X2CScope/X2CScope.h"
 #include "mcc_generated_files/pin_manager.h"
 #include "mcc_generated_files/tmr1.h"
+#include "mcc_generated_files/X2Cscope/X2Cscope.h"
 #include <stdbool.h>
 #include <stdint.h>
 #include <math.h>

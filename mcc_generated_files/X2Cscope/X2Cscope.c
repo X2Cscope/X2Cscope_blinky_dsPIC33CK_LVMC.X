@@ -30,11 +30,16 @@
 /*
  * This file is part of X2C. http://www.mechatronic-simulation.org/
  */
-#include "X2CScopeComm.h"
-#include "X2CScope.h"
+#include "X2CscopeComm.h"
+#include "X2Cscope.h"
 
-void X2CScope_Init(void)
+void X2Cscope_Init(void)
 {
     X2CScope_HookUARTFunctions(sendSerial, receiveSerial, isReceiveDataAvailable, isSendReady);
     X2CScope_Initialise();
+}
+
+//Interrupt handler to call model update
+void TMR1_CallBack(void){
+    X2CScope_Update();
 }
